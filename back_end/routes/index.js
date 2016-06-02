@@ -24,4 +24,8 @@ var ctrlContacts = require('../controllers/contacts.controllers.js');
 		.route('/contacts/:contactId')
 		.delete(ctrlContacts.contactDelete);
 
+	router
+		.route('/search/contacts')
+		.get(ctrlContacts.contactSearch);
+
 module.exports = router;

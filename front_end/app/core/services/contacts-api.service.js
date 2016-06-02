@@ -12,7 +12,8 @@
 			getOneContact 	: getOneContact,
 			addNewContact 	: addNewContact,
 			updateContact 	: updateContact,
-			deleteContact 	: deleteContact
+			deleteContact 	: deleteContact,
+			searchContacts	: searchContacts
 		}
 
 		return ContactApi;
@@ -32,6 +33,9 @@
 		}
 		function deleteContact(id) {
 			return $http.delete('api/contacts/' + id);
+		}
+		function searchContacts(params) {
+			return $http.get('/api/search/contacts/', params);
 		}
 	}
 })();

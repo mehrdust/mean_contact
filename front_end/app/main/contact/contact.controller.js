@@ -12,6 +12,9 @@
 		vm.contacts = [];
 		vm.error = null;
 		vm.selectedContact = -1;
+		vm.srchInputName = "";
+		vm.srchInputPhone = "";
+		vm.srchInputAddress = "";
 
 		// Controller methods
 		vm.modalAddNewContact 	= modalAddNewContact;
@@ -19,6 +22,8 @@
 		vm.editContact 			= editContact;
 		vm.removeConfirmContact = removeConfirmContact;
 		vm.removeContact 		= removeContact;
+		vm.searchContacts		= searchContacts;
+		vm.cleanForm			= cleanForm;
 
 		// Initialize the controller
 		activate();
@@ -85,6 +90,35 @@
 					vm.error = err.message;
 				}
 			);
+		}
+		// Search for contacts
+		function searchContacts() {
+			var qryParams = {params: {}};
+			if (vm.srchInputName) {
+				qryParams.params['name'] = vm.srchInputName;
+			}
+			if (vm.srchInputPhone) {
+				qryParams.params['phone'] = vm.srchInputPhone;
+			}
+			if (vm.srchInputAddress) {
+				qryParams.params['address'] = vm.srchInputAddress;
+			}
+			ContactApi.searchContacts(qryParams)
+				.then(function(data) {
+					vm.contacts = [];
+					angular.forEach(data.data, function(value, key) {
+						vm.contacts.push(value);
+						vm.error = null;
+					});
+				}
+			);
+		}
+		// Cleans search contact form
+		function cleanForm() {
+			vm.srchInputName = "";
+			vm.srchInputPhone = "";
+			vm.srchInputAddress = "";
+			getContacts();
 		}
 		// Promises
 		function fnSuccess(data) {
