@@ -9,3 +9,9 @@ Simple MEAN stack application for contacts
 
 ### Run application
     $ node app.js
+
+### Run Karma
+
+to run Karma unti testing simply open a new terminal and run:
+
+	$ karma start karma.conf.js
