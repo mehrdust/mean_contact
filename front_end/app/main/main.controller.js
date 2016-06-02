@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-    	.module('myApp')
+    	.module('app')
     	.controller('MainController', MainController);
 
 	// @ngInject

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-    	.module('myApp', [
+    	.module('app', [
     		// Application core
 	    	'app.core',
 
