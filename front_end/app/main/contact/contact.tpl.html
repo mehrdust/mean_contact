@@ -44,3 +44,64 @@
 		</div>
 	</div>
 </div>
+<!-- Modal Add/edit contact -->
+<div class="modal fade" id="frmContact" role="dialog">
+    <div class="modal-dialog">
+      	<!-- Modal content-->
+      	<div class="modal-content">
+	        <div class="modal-header">
+	          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	          	<h4 class="modal-title">Contact Form</h4>
+	        </div>
+	        <div class="modal-body">
+	        	<div ng-show="vm.error" class="alert alert-danger" role="alert">{{vm.error}}</div>
+	          	<form class="form-horizontal" role="form" ng-submit="vm.manageContact()">
+                  	<div class="form-group">
+                    	<label  class="col-sm-2 control-label" for="inputName">Name</label>
+                    	<div class="col-sm-10">
+                        	<input type="text" class="form-control" ng-model="vm.contacts[vm.selectedContact].name" id="inputName" placeholder="Enter a name here"/>
+                    	</div>
+                  	</div>
+                  	<div class="form-group">
+                    	<label class="col-sm-2 control-label" for="inputDescription" >Phone</label>
+                    	<div class="col-sm-10">
+                        	<input type="text" class="form-control" ng-model="vm.contacts[vm.selectedContact].phone" id="inputPhone" placeholder="Contact phone number"/>
+                    	</div>
+                  	</div>
+                  	<div class="form-group">
+                    	<label class="col-sm-2 control-label" for="inputDescription" >Address</label>
+                    	<div class="col-sm-10">
+                        	<input type="text" class="form-control" ng-model="vm.contacts[vm.selectedContact].address" id="inputAddress" placeholder="Contact address"/>
+                    	</div>
+                  	</div>
+                  	<div class="form-group">
+                    	<div class="col-sm-offset-2 col-sm-10">
+                      		<button type="submit" class="btn btn-primary">Submit</button>
+                    	</div>
+                  	</div>
+                </form>
+	        </div>
+	        <div class="modal-footer">
+	          	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+      	</div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Delete Contact
+            </div>
+            <div class="modal-body">
+	            <div ng-show="vm.error" class="alert alert-danger" role="alert">{{vm.error}}</div>
+                Are you sure you want to delete <strong>{{vm.contacts[vm.selectedContact].name}}</strong>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok" ng-click="vm.removeContact()">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
