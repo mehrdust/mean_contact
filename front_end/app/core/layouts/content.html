@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" ui-sref="app">MEAN Contacts</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="app.company">Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <h1>MEAN Stack Demo</h1>
+        <p>This is sample demo application build by MEAN stack to demonstrate the full-stack RESTful application.</p>
+        <p><a class="btn btn-primary btn-lg" ui-sref="app.company" role="button">View Contacts</a></p>
+    </div>
+</div>
+<div ui-view="content" class="container"></div>

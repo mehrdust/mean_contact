@@ -1,21 +1,21 @@
 {
-  "name": "candidate-test",
+  "name": "mean_contact",
   "version": "1.0.0",
-  "description": "simple test application built by MEAN stack.",
+  "description": "simple contact application built by MEAN stack.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mehrdust/candidate-test.git"
+    "url": "git+https://github.com/mehrdust/mean_contact.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mehrdust/candidate-test/issues"
+    "url": "https://github.com/mehrdust/mean_contact.git/issues"
   },
-  "homepage": "https://github.com/mehrdust/candidate-test#readme",
+  "homepage": "https://github.com/mehrdust/mean_contact.git#readme",
   "dependencies": {
     "angular-html5-proxy": "^1.0.2",
     "body-parser": "^1.15.1",
