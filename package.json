@@ -1,0 +1,38 @@
+{
+  "name": "candidate-test",
+  "version": "1.0.0",
+  "description": "simple test application built by MEAN stack.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehrdust/candidate-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehrdust/candidate-test/issues"
+  },
+  "homepage": "https://github.com/mehrdust/candidate-test#readme",
+  "dependencies": {
+    "angular-html5-proxy": "^1.0.2",
+    "body-parser": "^1.15.1",
+    "event-stream": "^3.3.2",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.0.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.7",
+    "gulp-notify": "^2.2.0",
+    "gulp-stylus": "^2.3.1",
+    "main-bower-files": "^2.13.0",
+    "mongoose": "^4.4.19"
+  },
+  "devDependencies": {
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-auto-reload": "^0.1.0"
+  }
+}
