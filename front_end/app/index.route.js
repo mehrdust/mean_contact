@@ -15,7 +15,8 @@
 				url: '/',
 				views: {
 					'main': {
-						templateUrl: 'app/core/layouts/content.html',
+						templateUrl: 'app/core/layouts/content.tpl.html',
+						controller: 'MainController as vm'
 					}
 				}
 			}

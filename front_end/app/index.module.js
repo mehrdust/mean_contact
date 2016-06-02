@@ -4,6 +4,10 @@
     angular
     	.module('myApp', [
     		// Application core
-	    	'app.core'
-		]);
+	    	'app.core',
+
+	    	// Contact module
+	    	'app.contact'
+		]
+	);
 })();
